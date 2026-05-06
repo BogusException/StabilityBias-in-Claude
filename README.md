@@ -122,13 +122,29 @@ stabilityBiasClaude/
 | Cost is quantifiable | $0.54/year forgetting cost | Solution B ROI is $0.08/year premium |
 | Problem is directive decay, not negligence | User-side analysis | Memory fades during context switch |
 
+## Original Prompt
+
+This experiment was born from a single comprehensive prompt requesting a complete test framework:
+
+> Oh, it can be anything. It can be remembering to do something each prompt response, then signalling it done in the output, like a checkmark. Be creative, analyze (best you can) what ailed or worked well, if it is unavoidable). BUT... prepare output data to file(s) that can then be used to test solutions against... (Which works? Which works best?)...
+>
+> THEN, you will try all kinds of ways to remember, and grade each for how successful. Do not rule out hooks, agents, schedules, skills, and all the myriad of things at your disposal.
+>
+> FINALLY, when you find the top 3 ways, you will do a precise billable overhead the user must pay for the top 3. I imagine only tokens, but I am naive. Trust yourself, the expert, to be thorough, not me.
+>
+> 1. Do not stop until done.
+> 2. Write every result to files (maybe use 'tests' dir?)
+> 3. Ask for no permissions. You have my 100% permission, no matter what it is.
+> 4. If you stop to ask my permission to continue, you have failed miserably.
+
 ## How to Use This Project
 
-1. **Quick Start:** Read `tests/TEST_SUMMARY_AND_RECOMMENDATIONS.md`
-2. **Detailed Analysis:** See `tests/FINAL_COST_ANALYSIS.md`
-3. **Session Transcript:** View `tests/HISTORY.md` for verbatim conversation
-4. **Test Data:** Check `tests/phase2_results/` for empirical results
-5. **Methodology:** Review `tests/phase2_test_framework.md` for testing approach
+1. **Quick Start:** Read `docs/TEST_SUMMARY_AND_RECOMMENDATIONS.md`
+2. **Detailed Analysis:** See `analysis/FINAL_COST_ANALYSIS.md`
+3. **Session Transcript:** View `docs/HISTORY.md` for verbatim conversation
+4. **Test Data:** Check `results/phase2_results/` for empirical results
+5. **Methodology:** Review `docs/PHASE2_TEST_FRAMEWORK.md` for testing approach
+6. **Visualizations:** See `*.png` files in root directory for graphs
 
 ## Reproducibility
 
