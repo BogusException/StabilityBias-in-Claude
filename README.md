@@ -8,6 +8,9 @@ This project investigates a real AI reliability issue: **directive decay during 
 
 **Key Finding:** Active signaling (checkmarks) = 100% success. Passive reminders = 0% success.
 
+![Signaling Impact Graph](graph_1_signaling_impact.png)
+*The dramatic difference: with active checkmark signaling, perfect adherence. Without it, complete failure.*
+
 ## The Problem
 
 A user repeatedly reminds Claude to commit changes after file writes. Despite acknowledging the directive, Claude forgets within 2-3 changes. This costs tokens and loses work.
@@ -24,6 +27,9 @@ A user repeatedly reminds Claude to commit changes after file writes. Despite ac
 - **Result:** 100% success (15/15 commits)
 - **Finding:** Problem is NOT conscious failure—it's directive decay in flow state
 - **Conclusion:** Active signaling works perfectly
+
+![Phase 1 Timeline](graph_5_phase1_timeline.png)
+*All 15 sequential changes succeeded with checkmark signaling. Perfect adherence proven.*
 
 ### Phase 2: Solution Testing ✅
 - **Tested:** 10 different enforcement/reminder approaches
@@ -46,6 +52,12 @@ A user repeatedly reminds Claude to commit changes after file writes. Despite ac
 | 9 | Git validation block | Enforcement | ✓✓ 99.9% | Configured |
 | 10 | Behavioral framing | Passive | ✗ Unproven | Not tested |
 
+![Solution Ranking](graph_2_solution_ranking.png)
+*Effectiveness ranking of all 10 solutions. Green (enforcement) dominates. Red (passive reminders) fails across the board.*
+
+![Solution Categories](graph_6_category_distribution.png)
+*Only 2 solutions actually work: enforcement-based mechanisms. 7 are passive variations that fail.*
+
 ## Top 3 Solutions (Cost Analysis)
 
 ### Solution A: Project CLAUDE.md Directive
@@ -65,6 +77,12 @@ A user repeatedly reminds Claude to commit changes after file writes. Despite ac
 - **Effectiveness:** 85% estimated
 - **Implementation:** Display token costs of forgotten commits
 - **Status:** Designed, optional
+
+![Cost vs Effectiveness](graph_3_cost_effectiveness.png)
+*Solution B (Git Validation) costs most but guarantees highest effectiveness. Solution A (CLAUDE.md) is nearly free and provides good results.*
+
+![Annual Costs](graph_4_annual_costs.png)
+*All three solutions cost far less than the $0.54/year cost of forgetting. Solution B ROI breaks even in less than one year.*
 
 ## Project Structure
 
