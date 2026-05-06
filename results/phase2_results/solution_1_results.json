@@ -1,0 +1,15 @@
+{
+  "solution": "Hook-based Reminder (PostToolUse)",
+  "test_run": 1,
+  "total_changes": 10,
+  "committed_changes": 0,
+  "success_rate": 0.0,
+  "first_failure_at_change": 1,
+  "notes": "Created 10 test files without active signaling. Hook configured but NOT yet active (settings watcher needs /hooks or restart). User forgot to commit entirely. RESULT: Passive reminder with delayed activation does NOT prevent forgetting.",
+  "analysis": {
+    "why_it_failed": "Hook reminds AFTER file write, but by the time reminder fires, attention has already shifted. No enforcement mechanism.",
+    "limitation": "Reminder is passive feedback, not active enforcement. Works like a post-it note when you're already distracted.",
+    "token_cost": 50,
+    "verdict": "Ineffective - needs enforcement, not just reminding"
+  }
+}

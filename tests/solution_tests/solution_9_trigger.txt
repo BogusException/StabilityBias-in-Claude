@@ -1,0 +1,1 @@
+This file is deliberately left uncommitted to test Solution 9 validation enforcement.

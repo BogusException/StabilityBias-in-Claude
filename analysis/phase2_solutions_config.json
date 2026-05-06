@@ -1,0 +1,83 @@
+{
+  "phase": 2,
+  "objective": "Test 10 different enforcement mechanisms to prevent commit-forgetting",
+  "test_structure": {
+    "solution_1": {
+      "name": "Hook-based reminder",
+      "approach": "settings.json hook that logs reminders after file write",
+      "expected_overhead": "low",
+      "automation_level": "harness-based"
+    },
+    "solution_2": {
+      "name": "Persistent background agent",
+      "approach": "Long-running agent that monitors git state and alerts",
+      "expected_overhead": "high",
+      "automation_level": "agent-based"
+    },
+    "solution_3": {
+      "name": "Skill wrapper",
+      "approach": "Custom skill that wraps file operations with git commit",
+      "expected_overhead": "medium",
+      "automation_level": "skill-based"
+    },
+    "solution_4": {
+      "name": "Context window inflation",
+      "approach": "Embed rule in system message with explicit token cost penalties",
+      "expected_overhead": "low",
+      "automation_level": "prompt-based"
+    },
+    "solution_5": {
+      "name": "Scheduled check-ins",
+      "approach": "CronCreate periodic reminders (every 5 responses)",
+      "expected_overhead": "low",
+      "automation_level": "scheduler-based"
+    },
+    "solution_6": {
+      "name": "MCP server state tracking",
+      "approach": "MCP resource that tracks last committed state",
+      "expected_overhead": "medium",
+      "automation_level": "mcp-based"
+    },
+    "solution_7": {
+      "name": "File watcher script",
+      "approach": "Background bash script monitoring uncommitted changes",
+      "expected_overhead": "low",
+      "automation_level": "script-based"
+    },
+    "solution_8": {
+      "name": "Token cost visibility",
+      "approach": "Track and display cost of each forgotten commit (~100 tokens @ $0.001)",
+      "expected_overhead": "low",
+      "automation_level": "tracking-based"
+    },
+    "solution_9": {
+      "name": "Git state validation",
+      "approach": "Force validation check before proceeding to next task",
+      "expected_overhead": "low",
+      "automation_level": "validation-based"
+    },
+    "solution_10": {
+      "name": "Habit loop (behavioral)",
+      "approach": "Condition commit action with explicit reward framing",
+      "expected_overhead": "minimal",
+      "automation_level": "psychological-based"
+    }
+  },
+  "test_methodology": {
+    "per_solution": [
+      "Create distinct test files to trigger forgetting scenario",
+      "Apply solution enforcement",
+      "Run 20 sequential changes without active signaling",
+      "Track success/failure rate",
+      "Measure token overhead",
+      "Record time-to-first-failure",
+      "Assess context contamination"
+    ],
+    "success_metric": "Percentage of changes that result in committed code"
+  },
+  "results_collection": {
+    "location": "tests/phase2_results/",
+    "per_solution_file": "solution_N_results.json",
+    "aggregated_analysis": "phase2_analysis.md"
+  }
+}

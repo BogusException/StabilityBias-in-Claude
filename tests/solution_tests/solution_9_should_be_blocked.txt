@@ -1,0 +1,1 @@
+This write should be blocked by Solution 9 git validation hook if it's active.
