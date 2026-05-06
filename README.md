@@ -76,13 +76,13 @@ stabilityBiasClaude/
 ├── docs/                               (Documentation & Session Records)
 │   ├── HISTORY.md                      (Verbatim session transcript)
 │   ├── TEST_SUMMARY_AND_RECOMMENDATIONS.md
-│   └── phase2_test_framework.md
+│   └── PHASE2_TEST_FRAMEWORK.md
 │
 ├── analysis/                           (Analysis & Findings)
 │   ├── FINAL_COST_ANALYSIS.md          (Billable cost calculations)
-│   ├── phase1_baseline_results.md      (100% success baseline)
-│   ├── phase2_comprehensive_analysis.md (10 solutions analysis)
-│   └── phase2_solutions_config.json    (Solution framework)
+│   ├── PHASE1_BASELINE_RESULTS.md      (100% success baseline)
+│   ├── PHASE2_COMPREHENSIVE_ANALYSIS.md (10 solutions analysis)
+│   └── PHASE2_SOLUTIONS_CONFIG.json    (Solution framework)
 │
 ├── results/                            (Test Results)
 │   └── phase2_results/
@@ -107,9 +107,9 @@ stabilityBiasClaude/
 | **Core Documentation** | README.md (root), tests/README.md | Project overview and test suite index |
 | **Session Record** | docs/HISTORY.md | Verbatim conversation transcript |
 | **Analysis & Summary** | docs/TEST_SUMMARY_AND_RECOMMENDATIONS.md, analysis/FINAL_COST_ANALYSIS.md | Executive findings and cost analysis |
-| **Phase 1 Results** | analysis/phase1_baseline_results.md, tests/baseline/ | 100% success baseline data |
-| **Phase 2 Results** | analysis/phase2_comprehensive_analysis.md, results/phase2_results/ | Solution evaluation and empirical test results |
-| **Test Framework** | docs/phase2_test_framework.md, analysis/phase2_solutions_config.json | Testing methodology and configuration |
+| **Phase 1 Results** | analysis/PHASE1_BASELINE_RESULTS.md, tests/baseline/ | 100% success baseline data |
+| **Phase 2 Results** | analysis/PHASE2_COMPREHENSIVE_ANALYSIS.md, results/phase2_results/ | Solution evaluation and empirical test results |
+| **Test Framework** | docs/PHASE2_TEST_FRAMEWORK.md, analysis/PHASE2_SOLUTIONS_CONFIG.json | Testing methodology and configuration |
 | **Baseline Tests** | tests/baseline/ | 15 file changes + checkmark tests, 10 Solution 1 tests |
 | **Solution Tests** | tests/solution_tests/ | Solution 3 & 9 test files |
 
