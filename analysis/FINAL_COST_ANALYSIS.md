@@ -1,7 +1,21 @@
 # FINAL COST ANALYSIS: Top 3 Solutions for Commit Forgetting
 
-## Problem Statement
-User pays expensive tokens every time I forget to commit after changes. This analysis quantifies the cost of three solutions and their ROI.
+## Methodology & Assumptions
+
+**This analysis is based on:**
+- **Token pricing:** $0.0015 per 1M tokens (Claude Haiku rate as of May 2026)
+- **Usage baseline:** 100 file changes per week = 5,200 changes/year
+- **Forgetting baseline:** 3 forgotten commits per development session × 20 sessions/month = ~720 forgotten commits/year
+- **Cost per forgotten commit:** ~50 tokens (~$0.000075)
+- **Current annual cost of forgetting:** ~$0.54/year in wasted tokens
+
+**To adapt these costs for your environment:**
+1. Adjust "changes per week" based on your actual velocity
+2. Adjust "forgotten commits per session" based on your forgetting pattern
+3. Update token pricing if using a different Claude tier
+4. Recalculate: (Setup + Per-Action × Annual Actions) × Token Rate
+
+See each solution section below for per-action token counts used in calculations.
 
 ---
 

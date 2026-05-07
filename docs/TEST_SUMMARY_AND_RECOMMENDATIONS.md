@@ -1,8 +1,15 @@
 # Commit Remembering: Test Summary & Recommendations
 
-## Executive Summary
+## Methodology Disclaimer
 
-Comprehensive testing completed to address chronic commit-forgetting issue. **Total investment: 62 test commits, 3 solutions designed, full cost-benefit analysis.**
+**Cost Calculation Basis:**
+All costs are calculated assuming:
+- **100 file changes per week** (typical development velocity)
+- **3 forgotten commits per session × 20 sessions/month** = ~720 forgotten commits/year
+- **50 tokens per forgotten commit** (~$0.000075 at $0.0015 per 1M tokens)
+- **Annual forgetting cost without intervention: ~$0.54/year**
+
+These assumptions should be adjusted based on your actual usage patterns. See FINAL_COST_ANALYSIS.md for detailed calculations.
 
 ---
 

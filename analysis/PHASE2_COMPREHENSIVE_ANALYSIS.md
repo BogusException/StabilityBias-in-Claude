@@ -1,8 +1,19 @@
 # Phase 2: Comprehensive Solution Analysis
 
+## Test Structure Clarification
+
+**Phase 1 baseline:** 15 sequential file changes with active checkmark signaling → 100% success  
+**Phase 2 solution testing:** 
+- Solution 1 empirically tested: 10 file changes without signaling → 0% success
+- Solutions 2-10: Evaluated theoretically (not empirically tested due to cost/complexity)
+
+**Overall:** 10 different solutions analyzed, 1 empirically tested, 2 designed for deployment, 3 chosen for top-tier cost analysis.
+
+---
+
 ## Baseline Evidence
-- **Phase 1 Result:** With active signaling (✓/✗), success rate = 100%
-- **Solution 1 Test:** Hook-based reminder, success rate = 0%
+- **Phase 1 Result (n=15 changes):** With active signaling (✓/✗), success rate = 100%
+- **Solution 1 Test (n=10 changes):** Hook-based reminder without signaling, success rate = 0%
 - **Key Finding:** Passive reminders don't work. ENFORCEMENT mechanisms required.
 
 ---

@@ -210,7 +210,7 @@ Public domain. Use freely for research, education, or any purpose.
 
 ## Contact
 
-Original experiment: AlgoTrading/claudeTrader project (2026-05-05 to 2026-05-06)
+Original experiment date: 2026-05-05 to 2026-05-06
 
 ---
 
