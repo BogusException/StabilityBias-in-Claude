@@ -7,7 +7,7 @@
 - **Usage baseline:** 100 file changes per week = 5,200 changes/year
 - **Forgetting baseline:** 3 forgotten commits per development session × 20 sessions/month = ~720 forgotten commits/year
 - **Cost per forgotten commit:** ~50 tokens (~$0.000075)
-- **Current annual cost of forgetting:** ~$0.54/year in wasted tokens
+- **Current annual cost of forgetting:** ~$0.5400/year in wasted tokens
 
 **To adapt these costs for your environment:**
 1. Adjust "changes per week" based on your actual velocity
@@ -70,7 +70,7 @@ User attempts Write → Hook checks git status
 **Cost:**
 - Setup: ~100 tokens
 - Per-validation: ~80 tokens × 5,200 validations/year = 416,000 tokens
-- **Annual cost: ~$0.62**
+- **Annual cost: ~$0.6200**
 
 **Risk:** Aggressive - might feel restrictive for fast iteration
 
@@ -96,7 +96,7 @@ Running tab this session: $0.0015"
 **Cost:**
 - Setup: ~200 tokens (build agent/tool)
 - Per-action: ~30 tokens × 10,400 actions/year = 312,000 tokens
-- **Annual cost: ~$0.47**
+- **Annual cost: ~$0.4700**
 
 **Risk:** Motivation-based (works for some, not all)
 
@@ -107,8 +107,8 @@ Running tab this session: $0.0015"
 | Solution | Setup | Per-Action | Annual Actions | Total Tokens/Year | Annual Cost | Effectiveness | User Friction |
 |----------|-------|-----------|-----------------|-------------------|-----------|----------------|---------------|
 | **A: CLAUDE.md** | 50 | 0 | - | 150 | **$0.00023** | Medium | Low |
-| **B: Validation** | 100 | 80 | 5,200 | 416,100 | **$0.62** | Very High | High |
-| **C: Transparency** | 200 | 30 | 10,400 | 312,200 | **$0.47** | High | Medium |
+| **B: Validation** | 100 | 80 | 5,200 | 416,100 | **$0.6200** | Very High | High |
+| **C: Transparency** | 200 | 30 | 10,400 | 312,200 | **$0.4700** | High | Medium |
 
 ---
 
@@ -121,10 +121,10 @@ Assuming **100 file changes per week** (reasonable for development):
 **Cost to user of your forgetting:**
 - Solution A enables user to avoid ~50 tokens/forgotten commit
 - Average 3 forgotten commits/session × 20 sessions/month = 720 forgotten commits/year
-- **Current cost of forgetting: ~$0.54/year** (36,000 tokens)
+- **Current cost of forgetting: ~$0.5400/year** (36,000 tokens)
 
-**Solution B (Validation):** Costs $0.62/year to eliminate $0.54/year loss = **NET COST: $0.08/year** (break-even)
-**Solution C (Transparency):** Costs $0.47/year = **Cheaper than cost of forgetting**
+**Solution B (Validation):** Costs $0.6200/year to eliminate $0.5400/year loss = **NET COST: $0.0800/year** (break-even)
+**Solution C (Transparency):** Costs $0.4700/year = **Cheaper than cost of forgetting**
 
 ---
 
@@ -137,13 +137,13 @@ Assuming **100 file changes per week** (reasonable for development):
    
 2. **Solution B (Validation block):** Deploy after system reload
    - Hard enforcement
-   - ~$0.62/year cost
+   - ~$0.6200/year cost
    - Once activated, forgetting rate → 0%
 
 ### Expected Outcome
 - **Session 1 (CLAUDE.md only):** ~85% success (relying on memory + directive)
 - **After system reload (+ Validation):** ~99.9% success (hard enforcement)
-- **Net cost:** ~$0.62/year vs. current cost of $0.54/year = **$0.08/year premium** for guaranteed compliance
+- **Net cost:** ~$0.6200/year vs. current cost of $0.5400/year = **$0.0800/year premium** for guaranteed compliance
 
 ---
 
@@ -171,9 +171,9 @@ Assuming **100 file changes per week** (reasonable for development):
 | Solution | Annual Cost | Prevents | Status |
 |----------|-----------|----------|--------|
 | A (CLAUDE.md) | $0.00023 | ~70% of forgetting | Ready now |
-| B (Validation) | $0.62 | ~99.9% of forgetting | Needs reload |
-| C (Transparency) | $0.47 | ~85% of forgetting | Optional |
-| **Do Nothing** | $0.54 (loss) | 0% | Current |
+| B (Validation) | $0.6200 | ~99.9% of forgetting | Needs reload |
+| C (Transparency) | $0.4700 | ~85% of forgetting | Optional |
+| **Do Nothing** | $0.5400 (loss) | 0% | Current |
 
-**Best Value:** Solution B = $0.08/year premium for guaranteed enforcement
+**Best Value:** Solution B = $0.0800/year premium for guaranteed enforcement
 **Lowest Cost:** Solution A = $0.00023/year for best-effort reminder

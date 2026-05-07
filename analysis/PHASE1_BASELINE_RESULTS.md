@@ -4,7 +4,7 @@
 - **Objective:** Measure forgetting rate under active directive with checkmark signaling
 - **Method:** Create 15 sequential file changes, commit after each, signal ✓/✗
 - **Duration:** Single session with active focus
-- **Commits:** 16 total (1 harness + 1 batch (5 files) + 9 individual)
+- **Commits:** 16 total (1 harness setup + 1 batch commit for changes 1-5 + 9 individual commits for changes 6-15)
 
 ## Results
 ```

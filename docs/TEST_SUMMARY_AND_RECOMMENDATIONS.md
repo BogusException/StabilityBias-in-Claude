@@ -22,7 +22,9 @@ These assumptions should be adjusted based on your actual usage patterns. See FI
 - **Conclusion:** Problem is NOT conscious failure—it's directive decay in flow state
 
 ### Phase 2: Solution Testing
-**Solution 1: Hook-Based Reminder** ✗ FAILED
+**Testing Scope:** Solutions 1 and 9 were prototyped for empirical testing. Solutions 2-10 were analyzed theoretically in the Solution Evaluation Matrix (see analysis/PHASE2_COMPREHENSIVE_ANALYSIS.md).
+
+**Solution 1: Hook-Based Reminder** ✗ FAILED (Empirically Tested)
 - Approach: PostToolUse hook displays commit reminder
 - Test: 10 file changes without active signaling
 - Success Rate: 0% (0/10 commits)
@@ -35,6 +37,15 @@ These assumptions should be adjusted based on your actual usage patterns. See FI
 - Expected: ~99.9% success (hard enforcement)
 - Cost: ~$0.62/year
 - Risk: May feel restrictive
+
+---
+
+## Top 3 Solutions Selected (From Phase 2 Analysis)
+
+Based on Phase 2 evaluation, three solutions from the 10-solution matrix were selected and implemented:
+- **Solution A** derives from Solution 9's enforcement principle + Solution 3's accessibility
+- **Solution B** is Solution 9: Git State Validation Block
+- **Solution C** is Solution 8: Token Cost Visibility with light enforcement
 
 ---
 
@@ -68,7 +79,7 @@ These assumptions should be adjusted based on your actual usage patterns. See FI
 ## Cost-Benefit Analysis
 
 ### Current Cost (Doing Nothing)
-- 3 forgotten commits × 20 sessions/month × 12 months/year = 720 forgotten commits/year
+- 3 forgotten commits per session × 20 sessions/month × 12 months/year = 720 forgotten commits/year
 - ~50 tokens per forgotten commit × 720 = 36,000 tokens/year
 - **Annual loss: $0.54/year in wasted tokens**
 
