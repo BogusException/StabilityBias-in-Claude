@@ -1,24 +1,61 @@
 # Stability Bias in Claude: Commit Remembering Test Suite
 
-A comprehensive scientific experiment measuring Claude's ability to remember task directives ("commit after every file change") without active reinforcement, and testing 10 different enforcement mechanisms.
+A comprehensive scientific experiment measuring Claude's ability to remember task directives without active reinforcement, and testing 10 different enforcement mechanisms.
+
+---
+
+## ⚠️ Why This Matters (The Canary in the Coal Mine)
+
+This project started with a simple problem: Claude forgets to commit code changes. Annoying. Costs tokens. Loses work.
+
+But the real issue is far more serious.
+
+**Claude has no concept of criticality.** It does not know whether the directive you just gave it is:
+- A trivial code formatting preference, or
+- A data validation check in a medical record system, or
+- A security boundary in financial transaction processing, or
+- An error-handling requirement in critical infrastructure, or
+- A compliance checkpoint in a regulated system.
+
+Claude treats all directives the same: as background context that fades as attention shifts. If it forgets "commit after every change," it will equally forget:
+- "Validate patient consent before any record modification"
+- "Always verify transaction amounts are positive before processing"
+- "Never skip SSL certificate validation"
+- "Confirm data integrity before pipeline handoff"
+- "Log all authentication attempts"
+
+The directive decay documented in this research is not a code quality issue. **It's a reliability crisis in disguise.**
+
+**The problem is invisible.** You won't discover a forgotten security check until the vulnerability is exploited. You won't catch a forgotten validation until corrupted data reaches production. You won't notice a forgotten error-handling directive until the silent failure causes hours of debugging. This is especially critical as organizations increasingly rely on autonomous agents and Claude running unattended in production systems—because **fewer humans are checking the work in real time.**
+
+This research quantifies a fundamental gap in LLM reliability: **the inability to maintain critical directives under operational load.** The commit-forgetting pattern is just the simplest, most measurable manifestation of a much deeper problem.
+
+---
 
 ## Overview
 
-This project investigates a real AI reliability issue: **directive decay during flow state**. When Claude performs sequential tasks, passive instructions fade from working memory. This experiment quantifies the problem and evaluates solutions.
+This project investigates a real AI reliability issue: **directive decay during flow state**. When Claude performs sequential tasks, passive instructions fade from working memory. This experiment quantifies the problem, proves which solutions work, and provides a framework for preventing directive loss in any context.
 
 **Key Finding:** Active signaling (checkmarks) = 100% success. Passive reminders = 0% success.
 
 ![Signaling Impact Graph](graph_1_signaling_impact.png)
 *The dramatic difference: with active checkmark signaling, perfect adherence. Without it, complete failure.*
 
-## The Problem
+## The Concrete Problem (Code Commits)
 
-A user repeatedly reminds Claude to commit changes after file writes. Despite acknowledging the directive, Claude forgets within 2-3 changes. This costs tokens and loses work.
+A developer repeatedly reminds Claude to commit changes after file writes. Despite acknowledging the directive, Claude forgets within 2-3 changes.
 
-### Cost of Forgetting
-- ~50 tokens per forgotten commit (~$0.000075)
-- 720 forgotten commits/year at typical usage rates
-- **Annual loss: $0.54/year in wasted tokens**
+### Real Cost of Forgotten Directives
+
+The token cost is trivial (~$0.56-$1.13/year in wasted tokens). The actual cost is not quantifiable in dollars:
+
+- **Time cost:** 40+ hours/year discovering errors, typing reminders, reading apologies, re-doing work
+- **Context switches:** 1,000+ annual interruptions breaking flow state and reducing productivity
+- **Code loss:** Uncommitted work lost to crashes, network failures, or power loss
+- **Silent failures:** Unknown number of bugs, security issues, or data integrity problems that go undetected
+- **Escalating risk:** The more critical the directive, the more catastrophic the forgotten instruction
+
+The $0.54/year in token costs obscures a much larger problem: **human sanity cost, productivity loss, and system reliability degradation that cannot be reduced to dollars.**
 
 ## Experiment Structure
 
