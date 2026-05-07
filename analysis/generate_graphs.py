@@ -59,9 +59,9 @@ solutions_data = [
 
 fig, ax = plt.subplots(figsize=(14, 7))
 
-solutions = [s['name'] for s in solutions_data]
-effectiveness = [s['effectiveness'] for s in solutions_data]
-colors = [s['color'] for s in solutions_data]
+solutions = [s['name'] for s in reversed(solutions_data)]
+effectiveness = [s['effectiveness'] for s in reversed(solutions_data)]
+colors = [s['color'] for s in reversed(solutions_data)]
 
 bars = ax.barh(solutions, effectiveness, color=colors, edgecolor='black', linewidth=1.5)
 
