@@ -157,12 +157,18 @@ This experiment was born from a single comprehensive prompt requesting a complet
 
 ## How to Use This Project
 
+### For Users (Want to improve your work with Claude?)
+- **START HERE:** `BEST_PRACTICES.md` — Real-world scenarios showing how to use active signaling (6 concrete examples)
+- **Quick Reference:** Decision tree for when you need active signaling
+
+### For Researchers (Want the full analysis?)
 1. **Quick Start:** Read `docs/TEST_SUMMARY_AND_RECOMMENDATIONS.md`
 2. **Detailed Analysis:** See `analysis/FINAL_COST_ANALYSIS.md`
 3. **Session Transcript:** View `docs/HISTORY.md` for verbatim conversation
 4. **Test Data:** Check `results/phase2_results/` for empirical results
 5. **Methodology:** Review `docs/PHASE2_TEST_FRAMEWORK.md` for testing approach
-6. **Visualizations:** See `*.png` files in root directory for graphs
+6. **Reproducibility:** See `REPRODUCTION.md` to run the experiment on other LLMs
+7. **Visualizations:** See `*.png` files in root directory for graphs
 
 ## Reproducibility
 
