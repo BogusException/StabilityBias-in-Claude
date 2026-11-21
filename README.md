@@ -2,6 +2,7 @@
 
 A comprehensive scientific experiment measuring Claude's ability to remember task directives without active reinforcement, and testing 10 different enforcement mechanisms.
 
+100% assisted/written by AI, for AI Users, and completely **because** of AI.
 ---
 
 ## ⚠️ Why This Matters (The Canary in the Coal Mine)
